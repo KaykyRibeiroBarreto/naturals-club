@@ -65,22 +65,42 @@
             </div>
         </div>
         
-        <!-- Background elements -->
+       
         
     </section>
 
-    <!-- The rest of the content would go here -->
+<!-- Card Overlay -->
+<div class="card-overlay" id="cardOverlay">
+    <div class="card" id="card">
 
-    <script>
-        // Simple script to handle smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+        <img src="images/04-Vector-15.webp" alt="Naturals Club Logo" class="logo">
+        <!-- Barra de progresso -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Primeira tela -->
+        <div class="screen" id="screen1">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="tel" id="telefone" placeholder="Telefone com DDD" required>
+            <button class="btn-green" id="comecar">Começar</button>
+        </div>
+
+        <!-- Segunda tela (inicialmente oculta) -->
+        <div class="screen hidden" id="screen2">
+            <h2>Mais algumas informações</h2>
+            <input type="number" id="idade" placeholder="Qual sua idade?" required>
+            <input type="text" id="momento" placeholder="Qual seu momento atual?" required>
+            <input type="text" id="obstaculo" placeholder="Qual seu principal obstáculo?" required>
+            <div class="buttons">
+                <button class="btn-back" id="voltar">Voltar para anterior</button>
+                <button class="btn-green" id="finalizar">Finalizar aplicação</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

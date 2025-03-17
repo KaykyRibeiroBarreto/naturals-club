@@ -115,11 +115,13 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px; /* Ajuste o padding conforme necessário */
+    padding: 0.5em 1em; /* Ajuste o padding conforme necessário */
+    width:  282.56px;
+    height: 58.63px;
     border-radius: 50px; /* Bordas arredondadas */
-    font-family: 'Sora', sans-serif; /* Fonte personalizada */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 600; /* Peso da fonte */
+    font-family: 'Sora', sans-serif; 
+    font-size: 0.875rem; 
+    font-weight: 100; /* Peso da fonte */
     text-decoration: none; /* Remove sublinhado do link */
     cursor: pointer; /* Cursor de ponteiro */
     transition: all 0.3s ease; /* Transição suave */
@@ -178,25 +180,57 @@ body {
     z-index: 1;
 }
 
-.leaf-decoration {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+.card-overlay {
+    display: none; /* Oculta o overlay inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    z-index: 1;
-    opacity: 0.8;
+    background-color:rgba(0, 0, 0, 0.651); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
 }
 
-.hero-background {
-    position: absolute;
-    right: 0;
-    top: 0;
+.card {
+    background-color: #0b1813;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0; /* Cor de fundo da barra */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress {
     height: 100%;
-    width: 60%;
-    background-image: url('images/students-background.webp');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-    z-index: 0;
+    width: 0%; /* Inicia com 0% de progresso */
+    background-color: #01B84E; /* Cor da barra de progresso */
+    border-radius: 4px;
+    transition: width 0.3s ease; /* Transição suave */
+}
+
+input {
+    padding: 16px;
+    border: 1px solid #01B84E;
+    border-radius: 8px;
+    font-size: 14px;
 }
